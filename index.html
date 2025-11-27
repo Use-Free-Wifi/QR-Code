@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>⚠ SECURITY ALERT ⚠</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        color: #ff4b4b;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+    }
+
+    .alert {
+        font-size: 30px;
+        font-weight: bold;
+        animation: flicker 0.15s infinite;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    @keyframes flicker {
+        0% { text-shadow: 0 0 5px #ff0000; }
+        50% { text-shadow: 0 0 12px #ff3030; }
+        100% { text-shadow: 0 0 5px #ff0000; }
+    }
+
+    .text {
+        font-size: 17px;
+        line-height: 1.5;
+        color: #ffcccc;
+        margin: 6px 0;
+    }
+
+    #prankBox {
+        display: none;
+        color: white;
+    }
+
+    .relax {
+        font-size: 26px;
+        color: #00ff6a;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .note {
+        font-size: 16px;
+        color: #dfdfdf;
+        margin-top: 20px;
+    }
+
+    .signature {
+        margin-top: 25px;
+        font-size: 16px;
+        color: #888;
+    }
+
+    /* Smooth fade effect */
+    .fade {
+        animation: fade 0.7s ease;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+    
+    <!-- SECURITY ALERT SCREEN -->
+    <div id="alertBox">
+        <div class="alert">⚠ SECURITY ALERT</div>
+        <div class="text">Suspicious Activity Detected On Your Device</div>
+        <div class="text">Your Phone May Be Via This QR Code!</div>
+        <div class="text" style="color:#ff9999; margin-top:10px;">Analyzing System...</div>
+    </div>
+
+    <!-- PRANK SCREEN -->
+    <div id="prankBox" class="fade">
+        <div class="relax">Relax — It's Just a Prank</div>
+        <div class="text" style="color:white;">
+            Nothing happened to your device.<br>
+            But yes… You got <b>Wi-Fi Pranked</b>! 😎
+        </div>
+
+        <div class="note">
+            Next time someone offers “Free Wi-Fi”,<br>
+            Think twice before scanning. 📶😉
+        </div>
+
+        <div class="signature">
+            — CODING BY AZEEM —
+        </div>
+    </div>
+
+</div>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("alertBox").style.display = "none";
+        document.getElementById("prankBox").style.display = "block";
+    }, 9000);
+</script>
+
+</body>
+</html>
